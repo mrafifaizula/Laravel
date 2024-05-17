@@ -16,7 +16,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="datatable">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -36,7 +36,7 @@
                                     <td align="center"><img src="{{asset('images/buku/' .$item->cover)}}"
                                             style="width: 100px; height: 100px;" alt="">
                                     </td>
-                                    <td>
+                                    <td align="center">
                                         <form action="{{ route('buku.destroy', $item->id) }}" method="post">
                                             @method('DELETE')
                                             @csrf
